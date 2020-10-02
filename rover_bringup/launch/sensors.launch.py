@@ -8,9 +8,9 @@ from launch_ros.actions import Node
 
 def generate_launch_description():
     rplidar_node = Node(
-        name='rplidarNode',
+        node_name='rplidarNode',
         package='rplidar_ros',
-        executable='rplidarNode',
+        node_executable='rplidarNode',
         output='screen',
         parameters=[{
                 'serial_port': '/dev/rplidar',
@@ -22,9 +22,9 @@ def generate_launch_description():
     )
     return LaunchDescription([
         Node(
-            name='rplidarNode',
+            node_name='rplidarNode',
             package='rplidar_ros',
-            executable='rplidarNode',
+            node_executable='rplidarNode',
             output='screen',
             parameters=[{
                 'serial_port': '/dev/rplidar',

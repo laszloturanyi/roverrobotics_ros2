@@ -19,14 +19,14 @@ def generate_launch_description():
             [ThisLaunchFileDir(), '/ps4_teleop.launch.py'])),
         Node(
             package="tf2_ros",
-            executable="static_transform_publisher",
+            node_executable="static_transform_publisher",
             output='screen',
             arguments=['0', '0', '0.25', '0', '0',
                        '0', 'base_footprint', 'base_link'],
         ),
         Node(
             package="tf2_ros",
-            executable="static_transform_publisher",
+            node_executable="static_transform_publisher",
             output='screen',
             arguments=['0', '0', '0.05', str(pi), '0', '0', 'base_link', 'laser'],
         ),

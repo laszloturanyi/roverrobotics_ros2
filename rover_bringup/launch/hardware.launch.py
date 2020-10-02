@@ -18,16 +18,16 @@ def generate_launch_description():
         SetEnvironmentVariable('RCUTILS_CONSOLE_STDOUT_LINE_BUFFERED', '1'),
         Node(
             package='rover_driver',
-            executable='rover_driver',
+            node_executable='rover_driver',
             output='screen',
             parameters=[hardware_config],
-            arguments=[('__log_level:=debug')],
+            arguments=[('__log_level:=info')],
         ),
-        # todo: this publishes static positions for wheel. Switch to publishing wheel position
-        # based on encoder data
+         #todo: this publishes static positions for wheel. Switch to publishing wheel position
+         #based on encoder data
         Node(
             package='joint_state_publisher',
-            executable='joint_state_publisher',
+            node_executable='joint_state_publisher',
             output='screen',
             arguments=[str(urdf)],
             parameters=[hardware_config]
