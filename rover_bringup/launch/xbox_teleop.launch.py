@@ -21,11 +21,11 @@ def generate_launch_description():
     return LaunchDescription([
         SetEnvironmentVariable('RCUTILS_CONSOLE_STDOUT_LINE_BUFFERED', '1'),
         Node(
-            package='rover_teleop', executable='gamepad_mapper_node.py', output='screen',
+            package='rover_teleop', node_executable='gamepad_mapper_node.py', output='screen',
             parameters=[{"controller": str(controller_config), "topics": str(topics_config)}]
         ),
         Node(
-            package='joy', executable='joy_node', output='screen',
+            package='joy', node_executable='joy_node', output='screen',
             parameters=[{'dev': '/dev/input/jsX'}]
         ),
     ])
