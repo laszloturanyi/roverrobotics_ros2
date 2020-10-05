@@ -13,10 +13,10 @@ def generate_launch_description():
         SetEnvironmentVariable('RCUTILS_CONSOLE_STDOUT_LINE_BUFFERED', '1'),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(
             [ThisLaunchFileDir(), '/hardware.launch.py'])),
+        #IncludeLaunchDescription(PythonLaunchDescriptionSource(
+            #[ThisLaunchFileDir(), '/sensors.launch.py'])),
         IncludeLaunchDescription(PythonLaunchDescriptionSource(
-            [ThisLaunchFileDir(), '/sensors.launch.py'])),
-        IncludeLaunchDescription(PythonLaunchDescriptionSource(
-            [ThisLaunchFileDir(), '/ps4_teleop.launch.py'])),
+            [ThisLaunchFileDir(), '/xbox_teleop.launch.py'])),
         Node(
             package="tf2_ros",
             node_executable="static_transform_publisher",

@@ -21,7 +21,7 @@ def generate_launch_description():
             node_executable='rover_driver',
             output='screen',
             parameters=[hardware_config],
-            arguments=[('__log_level:=info')],
+            arguments=[('--ros-args --log-level INFO')],
         ),
          #todo: this publishes static positions for wheel. Switch to publishing wheel position
          #based on encoder data
