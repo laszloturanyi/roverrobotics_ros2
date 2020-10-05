@@ -1,0 +1,12 @@
+<robot name="rover_simple">
+    <link name="base_rover"></link>
+    <link name="realsense_front" />
+    <joint name="from_base_to_realsense_front" type="fixed">
+        <!-- Camera coordinates x > to the left, y -> down, z -> forward -->
+        <origin xyz="0.165 -0.01 0.2" rpy="-1.57079632679 0 -1.57079632679" />
+        <parent link="base_rover" />
+        <child link="realsense_front" />
+    </joint>
+
+    <!-- pr2 robot links and joints and more -->
+</robot>
